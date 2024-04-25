@@ -23,9 +23,6 @@ for i = 1:length(dir_list)
     %all_contours{i} = rtContours;
     %all_masks{i} = ROI_masks;
 
-    %save(char(append('\\Rsyd.net\homedir$\0044\ten9ti\My Documents\Uddannelse\dahanca levels\Data_analysis\', append(dir_list(i), '.mat'))), 'ROI_masks', '-v7.3')
-    %save(char(append('\\Rsyd.net\homedir$\0044\ten9ti\My Documents\Uddannelse\dahanca levels\Data_analysis\', append(dir_list(i), 'spatial.mat'))), 'spatial')
-
     for j = 1:length(nameToFind) % number of ROIs
        
         c = 1;
