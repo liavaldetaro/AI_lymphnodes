@@ -59,7 +59,7 @@ for loop=2:length(nameToFind)
         
    for i = 1:length(dir_list)
         
-       dir_name = append('\\prapprflstg01\Research\LBV\Level_data_MIM\', dir_list(i));
+       dir_name = append('\\', dir_list(i));
        [CTimage, spatial, dim, rtContours, info] = read_dicom(dir_name);
        [ROI_masks] = ROI_to_mask(rtContours, CTimage, spatial);
             
@@ -150,7 +150,7 @@ for loop=2:length(nameToFind)
    DATA_SURF = interp3(MDS_median,SURF.vertices(:,1),SURF.vertices(:,2),SURF.vertices(:,3));
         
 
-   file_name = string(append('\\rsyd.net\homedir$\0044\ten9ti\My Documents\Uddannelse\dahanca levels\images\3d\', nameToFind(loop), '.mat'));
+   file_name = string(append('\\', nameToFind(loop), '.mat'));
    save(file_name, 'SURF', 'MDS_median');
 
    disp('FINISHED A RUN')
