@@ -13,7 +13,7 @@ nameToFind = [ {'Level Ia' }, {'Level Ib L' }, {'Level Ib R' }, ...
 
 for i = 1:length(dir_list)
 
-    dir_name = append('\\prapprflstg01\Research\LBV\Level_data_MIM\', dir_list(i))
+    dir_name = append('\\', dir_list(i))
     [CTimage, spatial, dim, rtContours, info] = read_dicom(dir_name);
     [ROI_masks] = ROI_to_mask(rtContours, CTimage, spatial);
     
